@@ -19,6 +19,7 @@ public class Predictor {
             e.printStackTrace();
         }
     }
+
     public String predict(String modelName, int[] data)  {
         String jsonObject = convertToJson(modelName,data);
         sendDataThroughRequest(jsonObject);

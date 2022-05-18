@@ -1,17 +1,15 @@
 package com.diagnoseme.DiagnoseMe.controllers;
+
 import com.diagnoseme.DiagnoseMe.util.Predictor;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @CrossOrigin
-public class Covid19Controller {
+public class StrokeController {
 
-    @PostMapping(path = "/covid")
+    @PostMapping("/stroke")
     public @ResponseBody boolean makePrediction(@RequestBody int[] data){
-        String predictValue= new Predictor().predict("covid19_model", data);
+        String predictValue = new Predictor().predict("heart_stroke_model",data);
         return predictValue.equalsIgnoreCase("yes");
     }
-
 }
