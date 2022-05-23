@@ -9,7 +9,7 @@ public class Predictor {
 
     public Predictor(){
         try {
-            url = new URL("http://localhost:5000/predict");
+            url = new URL(" http://diagnoseme-models.azurewebsites.net/predict");
             connection = (HttpURLConnection)url.openConnection();
             connection.setRequestMethod("POST");
             connection.setRequestProperty("Content-Type", "application/json; utf-8");
